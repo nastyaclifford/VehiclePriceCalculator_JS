@@ -1,0 +1,54 @@
+
+.main-container{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    width: 70rem;
+    margin: 5rem;
+    padding: 2rem;
+    border: 3px solid rgb(85, 85, 179);
+    border-radius: 25px;
+    background-color: rgba(202, 202, 245, 0.679);
+    height: 22rem;
+}
+.main-form{
+    display:flex;
+    justify-content: space-around;
+}
+.main-form_item{
+    margin-bottom: 1.5rem;
+}
+.main-form_label{
+    font-weight: 600;
+}
+.input_engine{
+    width: 75px;
+}
+.main-box {
+    display: flex;
+    
+}
+.main-box_button{
+    margin-top: 1.3rem;
+    background-color: rgb(152, 192, 225);
+    height: 30px;
+    width: 250px;
+    border: 3px solid rgb(63, 63, 125);
+    border-radius: 30px;
+    margin-right: 3rem;
+}
+.main-box_button-another{
+    margin-top: 1.3rem;
+    background-color: rgb(152, 192, 225);
+    height: 30px;
+    width: 280px;
+    border: 3px solid rgb(63, 63, 125);
+    border-radius: 30px;
+    margin-right: 3rem;
+    display: none;
+}
+.main-box_displayResult{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.item_modelFord,.item_modelJeep,.item_modelToy,.item_Owners{
+    display:none;
+}

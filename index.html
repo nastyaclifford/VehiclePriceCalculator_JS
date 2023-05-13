@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/JS_Week16/assets/normalize.css" />
+    <link rel="stylesheet" href="/JS_Week16/assets/styles.css" />
+    <title>Car Price Calculator</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="main-container">
+        <h1 class="main_title">Калькулятор расчета стоимости автомобиля</h1>
+        <form name="main" class="main-form" action="#">
+          <div class="main-form_column">
+            <div class="main-form_item">
+              <label for="select_make" class="main-form_label">Марка</label>
+              <select
+                id="select_make"
+                name="selectMake"
+                class="main-form_select"
+              >
+              <option selected="true" disabled="disabled">Выберите марку</option>
+                <option value="Volkswagen">Volkswagen</option>
+                <option value="Jeep">Jeep</option>
+                <option value="Ford">Ford</option>
+                <option value="Toyota">Toyota</option>
+              </select>
+            </div>
+            <div class="main-form_item">
+                <div class="item_modelVW">
+              <label for="select_vw" class="main-form_label">Модель</label>
+              <select
+                id="select_vw"
+                name="selectModelVw"
+                class="main-form_select-vw"
+              >
+              <option selected="true" disabled="disabled">Выберите модель</option>
+                <option value="Atlas">Atlas</option>
+                <option value="Beetle">Beetle</option>
+                <option value="Golf">Golf</option>
+                <option value="Tiguan">Tiguan</option>
+              </select>
+            </div>
+            <div class="item_modelJeep">
+              <label for="select_jeep" class="main-form_label">Модель</label>
+              <select
+                id="select_jeep"
+                name="selectModelJeep"
+                class="main-form_select-jeep"
+              >
+              <option selected="true" disabled="disabled">Выберите модель</option>
+                <option value="Cherokee">Cherokee</option>
+                <option value="Wrangler">Wrangler</option>
+                <option value="Compass">Compass</option>
+                <option value="Renegade">Renegade</option>
+              </select>
+            </div>
+            <div class="item_modelFord">
+              <label for="select_ford" class="main-form_label">Модель</label>
+              <select
+                id="select_ford"
+                name="selectModelFord"
+                class="main-form_select-ford"
+              >
+              <option selected="true" disabled="disabled">Выберите модель</option>
+                <option value="Escape">Escape</option>
+                <option value="Mustang">Mustang</option>
+                <option value="Bronco">Bronco</option>
+                <option value="Explorer">Explorer</option>
+              </select>
+            </div>
+            <div class="item_modelToy">
+              <label for="select_toy" class="main-form_label">Модель</label>
+              <select
+                id="select_toy"
+                name="selectModelToy"
+                class="main-form_select-toy"
+              >
+              <option selected="true" disabled="disabled">Выберите модель</option>
+                <option value="RAV4">RAV4</option>
+                <option value="Highlander">Highlander</option>
+                <option value="Tacoma">Tacoma</option>
+                <option value="Sequoia">Sequoia</option>
+              </select>
+            </div>
+            </div>
+            <div class="main-form_item">
+              <label class="main-form_label">Вид топлива</label>
+              <div class="main-form_radio">
+                <input
+                id="radio-petrol_1"
+                  type="radio"
+                  name="radioPetrol"
+                  class="main-form_radio-petrol"
+                  
+                />
+                <label for="radio-petrol_1" class="main-form_radio-label"
+                  >Бензин</label
+                >
+              </div>
+              <div class="main-form_radio">
+                <input
+                id="radio-petrol_2"
+                  type="radio"
+                  name="radioPetrol"
+                  class="main-form_radio-petrol"
+                />
+                <label for="radio-petrol_2" class="main-form_radio-label"
+                  >Газ</label
+                >
+              </div>
+              <div class="main-form_radio">
+                <input
+                id="radio-petrol_3"
+                  type="radio"
+                  name="radioPetrol"
+                  class="main-form_radio-petrol"
+                />
+                <label for="radio-petrol_3" class="main-form_radio-label"
+                  >Дизель</label
+                >
+              </div>
+              <div class="main-form_radio">
+                <input
+                id="radio-petrol_4"
+                  type="radio"
+                  name="radioPetrol"
+                  class="main-form_radio-petrol"
+                />
+                <label for="radio-petrol_4" class="main-form_radio-label"
+                  >Электро</label
+                >
+              </div>
+            </div>
+          </div>
+          <div class="main-form_column">
+            <div class="main-form_item">
+              <label for="input_engine" class="main-form_label"
+                >Объем двигателя, л.</label
+              >
+              <input
+              class="input_engine"
+                value=""
+                id="input_engine"
+                type="number"
+                name="inputEngine"
+                min="1.1"
+                max="3.5" 
+              />
+            </div>
+            <div class="main-form_item">
+              <label class="main-form_label">Состояние автомобиля</label>
+              <div class="main-form_radio">
+                <input
+                  type="radio"
+                  name="radioCondition"
+                  class="main-form_radio-condition"
+                />
+                <label for="radio_condition_1" class="main-form_radio-label"
+                  >Новый</label
+                >
+              </div>
+              <div class="main-form_radio">
+                <input
+                  type="radio"
+                  name="radioCondition"
+                  class="main-form_radio-condition"
+                />
+                <label for="radio_condition_2" class="main-form_radio-label"
+                  >Поддержанный</label
+                >
+              </div>
+            </div>
+            <div class="main-form_item item_Owners">
+              <label class="main-form_label">Количество владельцев</label>
+              <div class="main-form_radio">
+                <input
+                  type="radio"
+                  name="radioOwner"
+                  class="main-form_radio-owner"
+                />
+                <label for="radio_owner_1" class="main-form_radio-label"
+                  >Один</label
+                >
+              </div>
+              <div class="main-form_radio">
+                <input
+                  type="radio"
+                  name="radioOwner"
+                  class="main-form_radio-owner"
+                />
+                <label for="radio_owner_2" class="main-form_radio-label"
+                  >Два</label
+                >
+              </div>
+              <div class="main-form_radio">
+                <input
+                  type="radio"
+                  name="radioOwner"
+                  class="main-form_radio-owner"
+                />
+                <label for="radio_owner_3" class="main-form_radio-label"
+                  >Более 3</label
+                >
+              </div>
+            </div>
+          </div>
+          <div class="main-form_column">
+            <div class="main-form_item">
+              <label for="input_mileage" class="main-form_label"
+                >Пробег, км.</label
+              >
+              <input
+                value=""
+                id="input_mileage"
+                type="number"
+                name="inputMileage"
+              />
+            </div>
+            <div class="main-form_item">
+              <label for="input_year" class="main-form_label"
+                >Год выпуска</label
+              >
+              <input
+                value=""
+                id="input_year"
+                type="number"
+                name="inputYear"
+                min="1990"
+                max="2023"
+              />
+            </div>
+          </div>
+        </form>
+        <div class="main-box">
+                <button class="main-box_button">Рассчитать стоимость</button>
+                <button class="main-box_button-another">Рассчитать стоимость снова</button>
+          <div class="main-box_display">
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="/JS_Week16/index.js"></script>
+  </body>
+</html>
